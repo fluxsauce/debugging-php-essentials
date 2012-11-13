@@ -27,12 +27,23 @@ if (isset($_REQUEST['PHP_Debug'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Debugging PHP Essentials</title>
     <meta name="description" content="Debug your PHP code efficiently a variety of client and server-side tools.">
-    <meta name="author" content="Jonathan Peck">
+    <meta name="author" content="Jon Peck">
     <meta name="viewport" content="width=device-width">
-    <?php if (isset($_REQUEST['PHP_Debug'])) { ?>
+    <?php
+      // PHP_Debug.
+      if (isset($_REQUEST['PHP_Debug'])): ?>
       <script type="text/javascript" src="<?php echo $php_debug_options['HTML_DIV_js_path']; ?>/html_div.js"></script>
       <link rel="stylesheet" href="<?php echo $php_debug_options['HTML_DIV_css_path']; ?>/html_div.css"/>
-    <?php } ?>
+    <?php endif; ?>
+    <?php
+      // Firebug Lite.
+      if (isset($_REQUEST['FirebugLite'])): ?>
+      <script type="text/javascript" src="https://getfirebug.com/firebug-lite.js">
+      {
+        startOpened: true
+      }
+      </script>
+    <?php endif; ?>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
