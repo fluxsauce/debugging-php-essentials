@@ -1,11 +1,31 @@
 <?php
 /**
  * @file
- * Simple HTML Template; sets up PHP_Debug.
+ * Simple HTML Template; sets up debugging tools, if enabled.
  */
 
+// Enable or disable debugging tools.
+$tools = array(
+  'chromephp' => FALSE,
+  'firephp' => FALSE,
+  'firebuglite' => FALSE,
+  'phpdebug' => FALSE,
+);
+
+// ChromePHP.
+if ($tools['chromephp']) {
+  require_once 'chromephp/ChromePhp.php';
+}
+
+// FirePHP.
+if ($tools['firephp']) {
+  // See http://www.firephp.org/HQ/Learn.htm for more details.
+  require_once 'FirePHPCore/FirePHP.class.php';
+  ob_start();
+}
+
 // PHP_Debug.
-if (isset($_REQUEST['PHP_Debug'])) {
+if ($tools['phpdebug']) {
   // Set paths.
   $php_debug_options = array(
     'HTML_DIV_images_path' => 'images',
@@ -31,13 +51,13 @@ if (isset($_REQUEST['PHP_Debug'])) {
     <meta name="viewport" content="width=device-width">
     <?php
       // PHP_Debug.
-      if (isset($_REQUEST['PHP_Debug'])): ?>
+      if ($tools['phpdebug']): ?>
       <script type="text/javascript" src="<?php echo $php_debug_options['HTML_DIV_js_path']; ?>/html_div.js"></script>
       <link rel="stylesheet" href="<?php echo $php_debug_options['HTML_DIV_css_path']; ?>/html_div.css"/>
     <?php endif; ?>
     <?php
       // Firebug Lite.
-      if (isset($_REQUEST['FirebugLite'])): ?>
+      if ($tools['firebuglite']): ?>
       <script type="text/javascript" src="https://getfirebug.com/firebug-lite.js">
       {
         startOpened: true
@@ -62,6 +82,6 @@ if (isset($_REQUEST['PHP_Debug'])) {
         <h3></h3>
       </footer>
     </div>
-    <?php if (isset($_REQUEST['PHP_Debug'])) $PHP_Debug->display(); ?>
+    <?php if ($tools['phpdebug']) $PHP_Debug->display(); ?>
   </body>
 </html>
