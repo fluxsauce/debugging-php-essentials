@@ -6,7 +6,7 @@
 
 // Enable or disable debugging tools.
 $tools = array(
-  'chromephp' => TRUE,
+  'chromephp' => FALSE,
   'firephp' => FALSE,
   'phpdebug' => FALSE,
 );
