@@ -13,7 +13,7 @@
  * @since V2.0.0 - 26 apr 2006
  * @filesource
  * 
- * @version    CVS: $Id: PHP_Debug_ShowSource.php,v 1.2 2008/09/24 12:34:44 c0il Exp $
+ * @version    CVS: $Id$
  */
 
 // View source configuration (to modify with your settings)
@@ -21,8 +21,7 @@ $view_source_options = array(
     'PEAR_ROOT' => 'W:/var/www/php/PEAR',
     'CSS_ROOT' => 'css',
     'ALLOWED_PATH' => array(
-        'E:\Works\Projets-DEV\phpdebug\\',
-        '/var/www-protected/php-debug.com/www/',
+        '/media/sf_sandbox',
     )
 );
 

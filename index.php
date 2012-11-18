@@ -27,14 +27,17 @@ if ($tools['firephp']) {
 
 // PHP_Debug.
 if ($tools['phpdebug']) {
-  // Set paths.
+  // Set paths, configuration.
   $php_debug_options = array(
-    'HTML_DIV_images_path' => 'images',
-    'HTML_DIV_css_path' => 'css',
-    'HTML_DIV_js_path' => 'js',
+    'HTML_DIV_images_path' => 'PHP_Debug/images',
+    'HTML_DIV_css_path' => 'PHP_Debug/css',
+    'HTML_DIV_js_path' => 'PHP_Debug/js',
+    'HTML_DIV_view_source_script_path' => 'PHP_Debug',
+    'replace_errorhandler' => TRUE,
   );
-  // Include file; if it's not in PHP, you'll have to refactor.
-  require_once 'PHP/Debug.php';
+  set_include_path(get_include_path() . PATH_SEPARATOR . 'PHP_Debug');
+  require_once 'PHP_Debug/PHP/Debug.php';
+  global $PHP_Debug;
   $PHP_Debug = new PHP_Debug($php_debug_options);
 }
 

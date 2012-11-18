@@ -8,7 +8,7 @@
  * @since V2.1.0 - 6 apr 2006
  * @filesource
  * 
- * @version    CVS: $Id: PHP_Debug_HTML_Div_test.php,v 1.4 2009/01/12 21:13:00 c0il Exp $
+ * @version    CVS: $Id$
  */
  
 error_reporting(E_ALL); // Report all possible errors

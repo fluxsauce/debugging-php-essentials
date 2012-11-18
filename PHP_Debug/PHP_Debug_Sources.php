@@ -6,7 +6,7 @@
  * @package PHP_Debug
  * @filesource
  * 
- * @version    CVS: $Id: PHP_Debug_Sources.php,v 1.1 2008/05/02 14:26:37 c0il Exp $
+ * @version    CVS: $Id$
  */ 
 
 include 'PHP/Debug.php';

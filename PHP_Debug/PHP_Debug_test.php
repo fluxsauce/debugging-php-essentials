@@ -6,7 +6,7 @@
  * @package PHP_Debug
  * @filesource
  * 
- * @version    CVS: $Id: PHP_Debug_test.php,v 1.1 2008/05/02 14:26:37 c0il Exp $
+ * @version    CVS: $Id$
  */ 
 
 echo '<?xml version="1.0" encoding="UTF-8"?>';

@@ -10,7 +10,7 @@
  * @since V2.0.0 - 6 apr 2006
  * @filesource
  * 
- * @version    CVS: $Id: PHP_Debug_HTML_Table_test.php,v 1.5 2009/01/12 21:13:00 c0il Exp $
+ * @version    CVS: $Id$
  */
  
 error_reporting(E_ALL); // Report all possible errors
